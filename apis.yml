@@ -1,23 +1,65 @@
 aid: bellatrixaerospace
+
 name: Bellatrixaerospace
-description: 'Bellatrixaerospace is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://framerusercontent.com/assets/xxgl3RhGVLAvbUur21TOvfTHDZU.jpg
+
+description: 'Bellatrixaerospace is a nascent aerospace technology firm focusing on advanced propulsion systems and satellite deployment services. The company aims to innovate in low Earth orbit access, offering modular launch solutions and in‑space manufacturing capabilities. While currently in early development stages, Bellatrixaerospace seeks partnerships with satellite operators and research institutions to accelerate its technology roadmap and expand its market presence across commercial and governmental sectors.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bellatrixaerospace/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Aerospace
+- Propulsion
+- Satellite
+- Technology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bellatrixaerospace-hosts.yml
+- type: Blog
+  url: https://bellatrix.aero/blog
+- type: DomainSecurity
+  url: security/bellatrixaerospace-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bellatrixaerospace
+  url: https://bellatrix.aero
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/bellatrixaerospace
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
